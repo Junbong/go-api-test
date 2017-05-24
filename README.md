@@ -1,15 +1,40 @@
-# Welcome to Revel
+# Welcome to go-api-test with Revel
 
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+[Revel](https://revel.github.io/) is a high-productivity web framework for the [Go language](http://www.golang.org/).
 
 
 ### Start the web server:
+```sh
+$ export $GOPATH=$REVEL_HOME
+$ cd $GOPATH
 
-   revel run myapp
+$ revel run github.com/Junbong/go-api-test
+```
 
 ### Go to http://localhost:9000/ and you'll see:
 
     "It works"
+
+## Routes
+### Shop Funnels
+[http://localhost:9000/shops/:shop_id/funnels](http://localhost:9000/shops/:shop_id/funnels)
+
+* URL params
+  * `shop_id`: Single shop ID, comma separated multiple shop IDs, or tag
+* Query params
+  * `from`: Date formatted YYYY-MM-DD
+  * `to`: Date formatted YYYY-MM-DD
+  * `profile`: Comma separated multiple profiles
+
+### Shop Funnels Average
+[http://localhost:9000/shops/:shop_id/funnels/average](http://localhost:9000/shops/:shop_id/funnels/average)
+
+* URL params
+  * `shop_id`: Single shop ID, comma separated multiple shop IDs, or tag
+* Query params
+  * `from`: Date formatted YYYY-MM-DD
+  * `to`: Date formatted YYYY-MM-DD
+  * `profile`: Comma separated multiple profiles
 
 ## Code Layout
 
