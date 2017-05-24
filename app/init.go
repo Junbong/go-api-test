@@ -66,10 +66,10 @@ var HeaderFilter = func(c *revel.Controller, fc []revel.Filter) {
 
 func InitDB() {
 	driver := revel.Config.StringDefault("db.driver", "postgres")
-	host := revel.Config.StringDefault("db.host", "wi-slave.service.zoyi.co")
+	host := revel.Config.StringDefault("db.host", "localhost")
 	port := revel.Config.IntDefault("db.port", 5432)
-	user := revel.Config.StringDefault("db.user", "zoyi")
-	password := revel.Config.StringDefault("db.password", "gksdn2roTlr!")
+	user := revel.Config.StringDefault("db.user", "user")
+	password := revel.Config.StringDefault("db.password", "userpass")
 	database := revel.Config.StringDefault("db.database", "wi")
 	sslmode := revel.Config.StringDefault("db.sslmode", "disable")
 	
